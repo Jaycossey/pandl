@@ -13,8 +13,6 @@ const Home = () => {
                         text-lg">
                 P&L Tunes is a UK based alternative music website. We showcase live reviews and music releases from artists all over the world that come to perform in the UK.
             </p>
-
-
         
         </div>
     );
