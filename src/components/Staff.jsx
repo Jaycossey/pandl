@@ -1,6 +1,6 @@
 const Staff = (props) => {
     return (
-        <>Hello Staff</>
+        <p className="pt-16">Hello Staff</p>
     );
 }
 
