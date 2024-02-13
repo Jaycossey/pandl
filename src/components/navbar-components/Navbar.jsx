@@ -15,10 +15,12 @@ const Navbar = () => {
         <>
             <nav className='w-screen 
                             h-16 
-                            fixed 
+                            static 
                             border-b-4 
+                            border-blue-900
                             flex 
                             p-2 
+                            z-10
                             bg-gradient-to-br 
                             from-orange-600 
                             via-orange-800 
