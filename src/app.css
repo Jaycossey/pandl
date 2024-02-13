@@ -25,6 +25,10 @@
     background-repeat: no-repeat;
 }
 
+.drop-shad {
+    filter: drop-shadow(-1px -1px 10px black);
+}
+
 /* MEDIA QUERIES -------------------------------- */
 
 @media (width <= 600px) {

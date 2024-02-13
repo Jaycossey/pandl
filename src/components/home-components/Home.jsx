@@ -7,9 +7,14 @@ const Home = () => {
 
     return (
         <div className="bg-pandl 
-                        overflow-hidden
-                        pt-16">
-            
+                        overflow-auto">
+                
+                <img className="w-40 
+                                m-auto 
+                                h-40
+                                drop-shad" 
+                    src={"./images/pandl-black.PNG"} />
+                
                 <Container content={welcomeText} />
                 <Container content={<PlaylistFrame text={topPicks} />} />
         </div>

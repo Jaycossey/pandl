@@ -8,8 +8,12 @@ const Container = (props) => {
                         flex-col
                         items-center
                         justify-center
-                        border-8
-                        rounded-3xl
+                        text-center
+                        rounded-2xl
+                        text-slate-900
+                        border-2
+                        shadow-2xl
+                        shadow-black
                         bg-white
                         bg-opacity-50">
             {props.content}
