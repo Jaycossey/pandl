@@ -22,9 +22,9 @@ const Reviews = (props) => {
         <div className="pt-2
                         h-screen
                         bg-gradient-to-r 
-                        from-orange-400 
-                        via-orange-600 
-                        to-blue-500">
+                        from-orange-500 
+                        via-orange-300 
+                        to-blue-400">
 
             {/* Review Select inst */}
             <Container content={"Our Staff have listened to some incredible bands, be that live or their studio work, browse our reviews below."} />
