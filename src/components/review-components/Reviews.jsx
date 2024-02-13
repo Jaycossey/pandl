@@ -31,7 +31,7 @@ const Reviews = (props) => {
 
             {/* Container for review cards */}
             {/* <Container content={reviewArr.map((review) => {
-                <Card innerContent={review} />
+                 <Card innerContent={review} />
             })} /> */}
 
         </div>
