@@ -1,5 +1,5 @@
-import Card from '../Card';
-import Container from "../Container";
+import Card from '../container-components/Card';
+import Container from "../container-components/Container";
 
 const Reviews = (props) => {
     const reviewArr = [
@@ -19,7 +19,7 @@ const Reviews = (props) => {
     
 
     return (
-        <div className="pt-2
+        <div className="pt-16
                         h-screen
                         bg-gradient-to-r 
                         from-orange-500 

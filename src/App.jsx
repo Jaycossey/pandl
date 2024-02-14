@@ -3,7 +3,7 @@ import './app.css';
 import Navbar from './components/navbar-components/Navbar';
 import Home from './components/home-components/Home';
 import Reviews from './components/review-components/Reviews';
-import Staff from './components/Staff';
+import Staff from './components/staff-components/Staff';
 import Contact from './components/contact-components/Contact';
 
 function App() {

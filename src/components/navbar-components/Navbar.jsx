@@ -13,9 +13,9 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='w-screen 
+            <nav className='w-full
                             h-16 
-                            static 
+                            absolute
                             border-b-4 
                             border-blue-900
                             flex 

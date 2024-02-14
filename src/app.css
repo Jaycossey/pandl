@@ -29,6 +29,28 @@
     filter: drop-shadow(-1px -1px 10px black);
 }
 
+/* STAFF STYLES --------------------------------- */
+.hover-anim:hover {
+    animation: bounce;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    transition: smooth;
+    cursor: pointer;
+}
+
+/* KEYFRAMES FOR HOVER ANIM */
+@keyframes bounce {
+    50% {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    70% {
+        transform: scale(1) rotate(-2deg);
+    }
+
+
+}
+
 /* MEDIA QUERIES -------------------------------- */
 
 @media (width <= 600px) {

@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../container-components/Container";
 import PlaylistFrame from "./PlaylistFrame";
 
 const Home = () => {
@@ -7,7 +7,8 @@ const Home = () => {
 
     return (
         <div className="bg-pandl 
-                        overflow-auto">
+                        overflow-auto
+                        pt-16">
                 
                 <img className="w-40 
                                 m-auto 

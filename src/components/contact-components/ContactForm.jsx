@@ -5,7 +5,7 @@ const ContactForm = (props) => {
     return (
         <form className='flex
                         flex-col
-                        p-2
+                        p-16
                         gap-6
                         items-center'>
             <p>Contact Us for a Review of your Music!</p>

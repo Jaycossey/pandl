@@ -1,11 +1,11 @@
 import ContactForm from "./ContactForm";
-import Container from "../Container";
+import Container from "../container-components/Container";
 
 const Contact = (props) => {
     return (
-        <div className="pt-2
+        <div className="pt-16
         h-screen
-        bg-gradient-to-r 
+        bg-gradient-to-l 
         from-orange-500 
         via-orange-300 
         to-blue-400">
