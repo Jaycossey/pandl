@@ -1,11 +1,7 @@
 import FormSelect from './FormSelect';
 import TextInput from './TextInput';
 
-const ContactForm = (props) => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("Hello Submit");
-    }
+const ContactForm = () => {
 
     return (
         <form action="URL_HERE" method="POST" 
@@ -40,9 +36,8 @@ const ContactForm = (props) => {
                 placeholder="Other Information" />
 
             <button
-                className="w-full h-8 bg-slate-500 bg-opacity-60 border-2 rounded-lg" 
-                type="button" 
-                onClick={handleSubmit}>
+                className="w-full h-16 bg-slate-500 bg-opacity-60 border-2 rounded-lg cursor-pointer" 
+                type="submit">
                     Submit
             </button>
         
