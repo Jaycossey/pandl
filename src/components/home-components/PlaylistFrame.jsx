@@ -1,4 +1,3 @@
-import Text from "../container-components/Text";
 import { Spotify } from "react-spotify-embed";
 
 const PlaylistFrame = (props) => {
@@ -6,7 +5,7 @@ const PlaylistFrame = (props) => {
 
         return (
         <>
-            <Text text={props.text} />
+            <p className="text-lg drop-shadow-md shadow-black">{props.text}</p>
             <Spotify className="w-full" link={spotifyUrl}/>
         </>
     );
