@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import Container from "../container-components/Container";
 import ReviewGrid from './ReviewGrid';
+import ReviewDisp from './ReviewDisp';
+import bandList from '../utils/bandList';
 
 const Reviews = (props) => {
-    const [currentDisplay, setCurrentDisplay] = useState(<ReviewGrid />);
-
-
+    const [currentDisplay, setCurrentDisplay] = useState(<ReviewDisp band={bandList[0]} />);
 
     return (
         <div className="pt-16
