@@ -3,13 +3,13 @@ const StaffCard = (props) => {
 
     return (
         <div className="w-60 
-                        h-60 
+                        h-conent 
                         flex 
                         flex-col 
                         items-center
                         m-auto
                         rounded-2xl
-                        p-2
+                        p-4
                         shadow-2xl
                         shadow-black
                         hover-anim">
@@ -18,8 +18,18 @@ const StaffCard = (props) => {
                             h-40 
                             rounded-md
                             mb-2" src={profile} alt={`${name} - ${job}`} />
-            <p>{name}</p>
-            <p>{job}</p>
+            
+            <p className="text-xl 
+                        drop-shadow-lg 
+                        0shadow-black">
+                            {name}
+            </p>
+
+            <p className="text-sm">{job}</p>
+            
+            <p>
+                Favourtie genres: <br/>{props.genre}
+            </p>
         </div>
     )
 }

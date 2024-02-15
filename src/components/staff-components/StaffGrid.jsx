@@ -8,9 +8,9 @@ const StaffGrid = (props) => {
                         flex-wrap
                         gap-10">
             
-            <StaffCard name="Phil" job="Owner" profile="images/phil.png" />
-            <StaffCard name="Kris" job="Reviewer" profile="images/kris.png" />
-            <StaffCard name="Josi" job="Reviewer" profile="images/josi.png" />
+            <StaffCard name="Phil" job="Owner" profile="images/phil.png" genre="Tech-Metal & Pop Punk" />
+            <StaffCard name="Kris" job="Reviewer" profile="images/kris.png" genre="Alternative, Indie, Rock & Metal" />
+            <StaffCard name="Josi" job="Reviewer" profile="images/josi.png" genre="Metalcore & Pop Punk" />
         </div>
     );
 }
