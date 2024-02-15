@@ -1,5 +1,5 @@
-import Card from '../Card';
-import Container from "../Container";
+import Card from '../container-components/Card';
+import Container from "../container-components/Container";
 
 const Reviews = (props) => {
     const reviewArr = [
@@ -19,12 +19,12 @@ const Reviews = (props) => {
     
 
     return (
-        <div className="pt-2
+        <div className="pt-16
                         h-screen
                         bg-gradient-to-r 
-                        from-orange-400 
-                        via-orange-600 
-                        to-blue-500">
+                        from-orange-500 
+                        via-orange-300 
+                        to-blue-400">
 
             {/* Review Select inst */}
             <Container content={"Our Staff have listened to some incredible bands, be that live or their studio work, browse our reviews below."} />

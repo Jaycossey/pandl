@@ -1,4 +1,4 @@
-import Text from "../Text";
+import Text from "../container-components/Text";
 import { Spotify } from "react-spotify-embed";
 
 const PlaylistFrame = (props) => {
