@@ -1,3 +1,5 @@
+import ReviewText from "./ReviewText";
+
 const ReviewDisp = (props) => {
     console.log(props)
     const { name, review, subName, type, image } = props.band;
@@ -13,44 +15,20 @@ const ReviewDisp = (props) => {
 
             <img src={image} 
                 alt={name + ' artwork'}
-                className="w-60 
-                            h-60
+                className="w-40 
+                            h-40
+                            md:h-60
+                            md:w-60
                             col-span-2
                             row-span-2
                             rounded-md
                             relative
                             ml-0" />
             
-            <p className="relative
-                            w-full
-                            h-8
-                            col-span-3
-                            row-span-1
-                            border-2">
-                                {name}
-            </p>
-            <p className="relative
-                            w-full
-                            h-8
-                            col-span-1
-                            row-span-1
-                            border-2">
-                                {subName}
-            </p>
-            <p className="relative w-content col-span-3
-                        row-span-2 border-2">
-                            {review}
-            </p>
-            <p className="relative
-                            w-full
-                            h-8
-                            col-span-3
-                            col-start-3
-                            row-start-5
-                            row-span-1
-                            border-2">
-                                "Writer Name HERE!!!"
-            </p>
+            <ReviewText text={name} />
+            <ReviewText text={subName} />
+            <ReviewText text={review} />
+            <ReviewText text={"writer"} />
         </div>
     );
 }

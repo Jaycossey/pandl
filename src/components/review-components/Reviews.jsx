@@ -5,7 +5,8 @@ import ReviewDisp from './ReviewDisp';
 import bandList from '../utils/bandList';
 
 const Reviews = (props) => {
-    const [currentDisplay, setCurrentDisplay] = useState(<ReviewGrid />);
+    const [currentBand, setCurrentBand] = useState(bandList[0]);
+    const [currentDisplay, setCurrentDisplay] = useState(<ReviewDisp band={currentBand} />);
     // Need to work out the onclick for the container with the current display, passing the onclick function 
     // to handle the target. Each target should have a value
     // On click, setCurrentDisplay to a ReviewDisp Element with the targets value (band info) as props
@@ -13,7 +14,7 @@ const Reviews = (props) => {
     return (
         <div className="pt-16
                         pb-8
-                        md:h-screen
+                        h-screen
                         bg-gradient-to-r 
                         from-orange-500 
                         via-orange-300 
