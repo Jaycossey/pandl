@@ -1,34 +1,18 @@
 import ReviewText from "./ReviewText";
 
 const ReviewDisp = (props) => {
-    console.log(props)
-    const { name, review, subName, type, image } = props.band;
-
     return (
+        // this whole section needs reworking, I want to think how to store the data, would be best to 
+        // work with JSON to target as best practice, this will allow the addition of new reviews via the 
+        // server
         <div className="p-2 
                         w-full 
                         flex 
                         flex-col 
                         items-center 
                         shadow-2xl 
+                        rounded-md
                         shadow-black">
-
-            <img src={image} 
-                alt={name + ' artwork'}
-                className="w-40 
-                            h-40
-                            md:h-60
-                            md:w-60
-                            col-span-2
-                            row-span-2
-                            rounded-md
-                            relative
-                            ml-0" />
-            
-            <ReviewText text={name} />
-            <ReviewText text={subName} />
-            <ReviewText text={review} />
-            <ReviewText text={"writer"} />
         </div>
     );
 }

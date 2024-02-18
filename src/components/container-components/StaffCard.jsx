@@ -28,7 +28,7 @@ const StaffCard = (props) => {
             <p className="text-sm">{job}</p>
             
             <p>
-                Favourtie genres: <br/>{props.genre}
+                Favourite genres: <br/>{props.genre}
             </p>
         </div>
     )
