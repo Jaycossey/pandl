@@ -3,7 +3,6 @@ import Container from "../container-components/Container";
 // import ReviewGrid from './ReviewGrid';
 import ReviewDisp from './ReviewDisp';
 // import fetchReview from '../utils/fetchReview.js';
-import fetchReview from '../utils/fetchReview';
 
 const Reviews = (props) => {
     /**
@@ -36,9 +35,13 @@ const Reviews = (props) => {
      * 
      */
 
-    console.log(fetchReview('../utils/reviews.json'));
+    /**
+     * IMPORTANT FOR NOW!!! Need to work the backend out before continuing
+     * with the front end, have to be able to handle the data before displaying it
+     * 
+     */
 
-    // console.log(fetchReview("reviews.json"));
+
 
     return (
         <div className="pt-16
