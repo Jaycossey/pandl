@@ -4,8 +4,10 @@ const Container = (props) => {
                         h-content
                         m-8
                         p-8
+                        gap-6
                         flex
-                        flex-col
+                        flex-row
+                        flex-wrap
                         items-center
                         justify-center
                         text-center
