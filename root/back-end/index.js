@@ -3,7 +3,9 @@
 // import fs
 const fs = require('fs');
 
-// read the json file
+// parse the json file
+const data = fs.readFileSync('./reviews.json');
+const parsedData = JSON.parse(data);
 
 // import express
 const express = require('express');
@@ -33,9 +35,17 @@ app.get("/status", (req, res) => {
 
 // fetch all reviews
 app.get("/reviews", (req, res) => {
+    // test results logged
     const reviews = {
-        "Reviews": "Test Results phil"
+        "Reviews": parsedData.phil.reviews
     }
+    // ensure that the parsed data works, tests for now
+    // follow this structure for the remainder of this API 
+    // will need to work with jswt for the login and "write review"
+    // sections. For now I want the get requests working to 
+    // handle the results and displaying on screen with the 
+    // front end
+    console.log(parsedData.phil.reviews[0]);
 
     res.send(reviews);
 });
