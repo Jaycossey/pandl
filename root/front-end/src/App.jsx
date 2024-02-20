@@ -7,6 +7,10 @@ import Staff from './components/staff-components/Staff';
 import Contact from './components/contact-components/Contact';
 
 function App() {
+  // REMEMBER!!!! fetch request locally still needs the server to be running
+  fetch("http://localhost:5000/status")
+    .then((res) => res.json)
+    .then((data) => console.log(data));
 
   return (
     <>
