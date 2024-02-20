@@ -43,8 +43,9 @@ app.get("/status", (req, res) => {
 });
 
 // fetch all reviews
-app.get("/reviews", (req, res) => {
+app.get("/reviews/all", (req, res) => {
     // all reviews
+    // returns array containing all reviews.
     const reviews = {
         "Reviews": allReviews
     }
@@ -53,7 +54,7 @@ app.get("/reviews", (req, res) => {
 });
 
 // fetch staff specific reviews
-app.get("/phil/reviews", (req, res) => {
+app.get("/reviews/phil", (req, res) => {
     const reviews = {
         "Reviews": parsedData.phil.reviews
     }
@@ -61,7 +62,7 @@ app.get("/phil/reviews", (req, res) => {
     res.send(reviews);
 });
 
-app.get("/laura/reviews", (req, res) => {
+app.get("/reviews/laura", (req, res) => {
     const reviews = {
         "Reviews": parsedData.laura.reviews
     }
@@ -69,7 +70,7 @@ app.get("/laura/reviews", (req, res) => {
     res.send(reviews);
 });
 
-app.get("/kris/reviews", (req, res) => {
+app.get("/reviews/kris", (req, res) => {
     const reviews = {
         "Reviews": parsedData.kris.reviews
     }
@@ -77,7 +78,7 @@ app.get("/kris/reviews", (req, res) => {
     res.send(reviews);
 });
 
-app.get("/josi/reviews", (req, res) => {
+app.get("/reviews/josi", (req, res) => {
     const reviews = {
         "Reviews": parsedData.josi.reviews
     }

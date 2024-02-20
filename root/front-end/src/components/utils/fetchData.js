@@ -12,7 +12,7 @@ const fetchData = (query) => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 res(data);
             })
             .catch(err => {

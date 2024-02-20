@@ -1,7 +1,9 @@
 import BandCard from "./BandCard";
+import fetchData from "../utils/fetchData";
 
 const ReviewGrid = () => {
-    const bandArray = bandList;
+    const bandArray = fetchData('reviews/all');
+    console.log("array: ", bandArray);
     
     return (
         <>

@@ -1,7 +1,7 @@
 import ReviewText from "./ReviewText";
 
 const ReviewDisp = (props) => {
-    console.log(`individual props: ${props.band}`)
+    console.log(`individual props: ${props.band}`);
     return (
         // this whole section needs reworking, I want to think how to store the data, would be best to 
         // work with JSON to target as best practice, this will allow the addition of new reviews via the 
