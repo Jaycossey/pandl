@@ -7,9 +7,15 @@ const fs = require('fs');
 const data = fs.readFileSync('./reviews.json');
 const parsedData = JSON.parse(data);
 
+// dupe all reviews
+const allReviews = [...parsedData.phil.reviews, ...parsedData.kris.reviews, ...parsedData.laura.reviews, ...parsedData.josi.reviews];
+
 // import express
 const express = require('express');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
 // port declaration
@@ -35,17 +41,43 @@ app.get("/status", (req, res) => {
 
 // fetch all reviews
 app.get("/reviews", (req, res) => {
-    // test results logged
+    // all reviews
+    const reviews = {
+        "Reviews": allReviews
+    }
+
+    res.send(reviews);
+});
+
+// fetch staff specific reviews
+app.get("/phil/reviews", (req, res) => {
     const reviews = {
         "Reviews": parsedData.phil.reviews
     }
-    // ensure that the parsed data works, tests for now
-    // follow this structure for the remainder of this API 
-    // will need to work with jswt for the login and "write review"
-    // sections. For now I want the get requests working to 
-    // handle the results and displaying on screen with the 
-    // front end
-    console.log(parsedData.phil.reviews[0]);
+
+    res.send(reviews);
+});
+
+app.get("/laura/reviews", (req, res) => {
+    const reviews = {
+        "Reviews": parsedData.laura.reviews
+    }
+
+    res.send(reviews);
+});
+
+app.get("/kris/reviews", (req, res) => {
+    const reviews = {
+        "Reviews": parsedData.kris.reviews
+    }
+
+    res.send(reviews);
+});
+
+app.get("/josi/reviews", (req, res) => {
+    const reviews = {
+        "Reviews": parsedData.josi.reviews
+    }
 
     res.send(reviews);
 });
