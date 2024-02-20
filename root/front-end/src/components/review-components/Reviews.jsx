@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Container from "../container-components/Container";
-// import ReviewGrid from './ReviewGrid';
+import ReviewGrid from './ReviewGrid';
 import ReviewDisp from './ReviewDisp';
-// import fetchReview from '../utils/fetchReview.js';
+import fetchData from '../utils/fetchData';
 
 const Reviews = (props) => {
     /**
@@ -24,7 +24,7 @@ const Reviews = (props) => {
     // what am i passing to identify the reviews needed?
     // on this page, its the entire collection, 
     // so I need to target reviews.phil.reviews, reviews.kris.reviews etc
-
+    let logThis = fetchData("phil/reviews");
     const [currentBand, setCurrentBand] = useState(0);
     const [currentDisplay, setCurrentDisplay] = useState(<ReviewDisp band={currentBand} />);
     
@@ -41,7 +41,7 @@ const Reviews = (props) => {
      * 
      */
 
-
+    console.log(logThis);
 
     return (
         <div className="pt-16

@@ -1,5 +1,4 @@
 import BandCard from "./BandCard";
-import bandList from "../utils/bandList";
 
 const ReviewGrid = () => {
     const bandArray = bandList;

@@ -12,9 +12,12 @@ const allReviews = [...parsedData.phil.reviews, ...parsedData.kris.reviews, ...p
 
 // import express
 const express = require('express');
-const cors = require('cors');
 const app = express();
 
+// import cors for data transfer
+const cors = require('cors');
+
+// use both methods in order to connect the front and back
 app.use(cors());
 app.use(express.json());
 
