@@ -1,14 +1,18 @@
-const BandCard = (props) => {
+import { forwardRef } from "react";
+
+// forward ref to grandparent (reviews) to handle element targeting
+const BandCard = forwardRef((props, ref) => {
 
     return (
-            
-        <div className="w-60 
+        <div id={props.name}
+                className="w-60 
                         h-60
                         rounded-2xl
                         shadow-2xl
                         p-2
                         shadow-black
-                        hover-anim">
+                        hover-anim"
+                ref={ref}>
 
             <img src={props.image} 
                 alt={props.name + " artwork"} 
@@ -23,6 +27,6 @@ const BandCard = (props) => {
 
         </div>
     );
-}
+});
 
 export default BandCard;

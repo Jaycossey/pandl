@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import fetchData from "../utils/fetchData";
 import BandCard from "./BandCard";
 
-const ReviewGrid = (props) => {
+const ReviewGrid = forwardRef((props, ref) => {
+
     // set state for review data
     const [data, setData] = useState([]);
-    
+
     // on component load fetch data
     useEffect(() => {
         fetchData('reviews/all')
@@ -18,17 +19,18 @@ const ReviewGrid = (props) => {
     return (
         <>
             {/* map over resulting array and display dynamically */}
-            {data.map((artist) => {
+            {data.map((artist, i) => {
                 return ( 
-                    <BandCard 
-                        key={`${artist.band}-card`}
+                    <BandCard  
+                        key={i}
                         name={artist.band} 
                         image={artist.image} 
-                        album={artist.title} />
+                        album={artist.title}
+                        ref={ref} />
                 );
             })}
         </>
     );
-}
+});
 
 export default ReviewGrid;
