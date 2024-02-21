@@ -19,6 +19,12 @@ const Reviews = (props) => {
      * I need to create an end point which filters through all reviews and returns
      *          that band's review only.
      * I need to then render the reviewDisp (individual review) component.
+     * 
+     * I COULD also and probably best practice, create an indexed dupe 
+     * array of the review list. That way when ref is passed I can also pass the 
+     * index to render that bands data without the need to handle another fetch
+     * request (remember that I need to fetch the text files as well so less load
+     * the better)
      */
     
     // set and handle currently displayed state
