@@ -1,5 +1,5 @@
 // api call for data on the site
-const fetchData = (query) => {
+const fetchData = async (query) => {
     // returns promise obj
     return new Promise((res, rej) => {
         // where query is the endpoint -- url will need updating 

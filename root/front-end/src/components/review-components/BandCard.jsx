@@ -7,7 +7,8 @@ const BandCard = (props) => {
                         rounded-2xl
                         shadow-2xl
                         p-2
-                        shadow-black">
+                        shadow-black
+                        hover-anim">
 
             <img src={props.image} 
                 alt={props.name + " artwork"} 

@@ -1,24 +1,38 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Container from "../container-components/Container";
 import ReviewGrid from './ReviewGrid';
 import ReviewDisp from './ReviewDisp';
 import fetchData from '../utils/fetchData';
 
 const Reviews = (props) => {
-    let data = fetchData("reviews/all");
-    const [currentBand, setCurrentBand] = useState(0);
-    const [currentDisplay, setCurrentDisplay] = useState(<ReviewDisp band={currentBand} />);
+    // useRef to target individual cards, pass to reviewGrid
+    const childRef = useRef(null);
+    // storage for reviewGrid display
+    const allReviews = <ReviewGrid childRef={childRef} />;
+    
+    /**
+     * PLANNING FOR STATE AND RENDERING MANAGEMENT
+     * I need to target the bandCard grandchild component
+     * I need to pass ref from this to reviewGrid to BandCard
+     * That way I can target them and get their data
+     * I need to use the targeting by key. Key needs to be specific to each band
+     * I need to create an end point which filters through all reviews and returns
+     *          that band's review only.
+     * I need to then render the reviewDisp (individual review) component.
+     */
+    
+    // set and handle currently displayed state
+    const [currentDisplay, setCurrentDisplay] = useState(allReviews);
 
-    // console.log(logThis);
-
-    useEffect(() => {
-        console.log("useeffect data", data);
-    }, [data]);
-
+    // handleClick may not be needed, remember to update container 
+    // component if needed
+    const handleClick = () => {
+        console.log(event.target);
+    } // THIS MAY NOT BE RELEVANT!!!! 
     return (
         <div className="pt-16
                         pb-8
-                        h-screen
+                        md:h-screen
                         bg-gradient-to-r 
                         from-orange-500 
                         via-orange-300 
@@ -26,7 +40,7 @@ const Reviews = (props) => {
 
             {/* Review Select inst */}
             <Container content={"Our Staff have listened to some incredible bands, be that live or their studio work, browse our reviews below."} />
-            <Container content={currentDisplay} />
+            <Container onClick={handleClick} content={currentDisplay} />
 
         </div>
     );

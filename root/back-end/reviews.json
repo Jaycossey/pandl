@@ -6,7 +6,8 @@
                     "band": "Diamond Construct",
                     "reviewType": "Single",
                     "review": "./src/assets/text-files.txt",
-                    "title": "Jynx"
+                    "title": "Jynx",
+                    "image": "images/diamondConstruct.png"
                 }
             ],
             "profilePhoto": "images/phil.png",
@@ -22,7 +23,8 @@
                     "band": "Pyrofox",
                     "reviewType": "Single",
                     "review": "./src/assets/text-files.txt",
-                    "title": "Animal"
+                    "title": "Animal",
+                    "image": "images/pyrofox.png"
                 }
             ],
             "profilePhoto": "images/kris.png",
@@ -37,7 +39,8 @@
                     "band": "Lune",
                     "reviewType": "Album",
                     "review": "./src/assets/text-files.txt",
-                    "title": "Lune"
+                    "title": "Lune",
+                    "image": "images/lune.png"
                 }
             ],
             "profilePhoto": "images/josi.png",
