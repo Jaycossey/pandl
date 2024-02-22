@@ -34,7 +34,6 @@
     animation: bounce;
     animation-iteration-count: 1;
     animation-duration: 0.7s;
-    cursor: pointer;
     transition: smooth;
 }
 
@@ -49,6 +48,25 @@
     }
 
 
+}
+
+/* REVIEW STYLES -------------------------------- */
+.loadingSpin {
+    width: 60px;
+    height: 60px;
+    border: 4px dotted white;
+    border-bottom: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* MEDIA QUERIES -------------------------------- */
