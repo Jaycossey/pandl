@@ -1,12 +1,13 @@
 import Container from "../container-components/Container";
 import ReviewGrid from './ReviewGrid';
 
-const Reviews = (props) => {
+const Reviews = () => {
 
     return (
         <div className="pt-16
                         pb-8
-                        md:h-screen
+                        h-screen
+                        bg-fixed
                         bg-gradient-to-r 
                         from-orange-500 
                         via-orange-300 

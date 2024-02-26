@@ -1,0 +1,28 @@
+{
+    "reviews": [
+        {
+            "band": "Diamond Construct",
+            "reviewType": "Single",
+            "review": "./src/assets/text-files/diamondConstruct.txt",
+            "title": "Jynx",
+            "image": "images/diamondConstruct.png",
+            "writer": "Phil"
+        },
+        {
+            "band": "Pyrofox",
+            "reviewType": "Single",
+            "review": "./src/assets/text-files/pyrofox.txt",
+            "title": "Animal",
+            "image": "images/pyrofox.png",
+            "writer": "Kris"
+        },
+        {
+            "band": "Lune",
+            "reviewType": "Album",
+            "review": "./src/assets/text-files/lune.txt",
+            "title": "Lune",
+            "image": "images/lune.png",
+            "writer": "Josi"
+        }
+    ]
+}

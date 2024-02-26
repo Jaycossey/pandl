@@ -1,16 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import ReviewText from "./ReviewText";
+import { useEffect, useState } from "react";
+import Loading from "./Loading";
 
 const ReviewDisp = (props) => {
     const {image, band, title, reviewType, writer, review} = props.bandData;
     const onClick = props.onClick;
+    const [reviewText, setReviewText] = useState(<Loading />);
+
+    useEffect(() => {
+        fetch(review, {mode: 'no-cors'})
+            .then((res) => res.text())
+            .then((data) => {
+                setReviewText(data);
+            })
+            .catch(err => console.error(err));
+        }, []);
 
     let writerCopy = writer;
 
     if (!writerCopy) {
-        writerCopy = "P&L Tunes"
+        writerCopy = "P&L Tunes";
     }
+
 
     return (
         // this whole section needs reworking, I want to think how to store the data, would be best to 
@@ -42,14 +55,15 @@ const ReviewDisp = (props) => {
 
                 {/* NEED TO WRITE FETCH CALL FOR THIS DATA!!!!! will 
                 rework backend ASAP after front end MVP */}
-                <ReviewText text={review} />
+                <ReviewText text={reviewText} />
 
                 <p>Review written by: {writerCopy}</p>
             </div>
 
             <FontAwesomeIcon icon={faCircleXmark}
                             onClick={onClick}
-                            className="absolute
+                            className="relative
+                                        mt-16
                                         w-16
                                         p-1
                                         bg-gradient-to-t
@@ -57,7 +71,6 @@ const ReviewDisp = (props) => {
                                         via-blue-200
                                         to-blue-300
                                         text-blue-500
-                                        bottom-16
                                         text-3xl
                                         rounded-full
                                         shadow-xl

@@ -3,7 +3,7 @@ const fetchData = async (query) => {
     // returns promise obj
     return new Promise((res, rej) => {
         // where query is the endpoint -- url will need updating 
-        fetch(`http://localhost:5000/${query}`)
+        fetch(query)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(503)
@@ -12,7 +12,7 @@ const fetchData = async (query) => {
                 return response.json();
             })
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 res(data);
             })
             .catch(err => {

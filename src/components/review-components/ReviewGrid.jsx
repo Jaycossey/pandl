@@ -13,8 +13,8 @@ const ReviewGrid = () => {
 
     // on component load fetch data
     useEffect(() => {
-        fetchData('reviews/all')
-            .then(res => setData(res.Reviews))
+        fetchData('./reviews.json', {mode: 'no-cors'})
+            .then(res => setData(res.reviews))
             .then(() => {
                 allCards = data.map((artist, i) => {
                     return ( 
@@ -34,7 +34,6 @@ const ReviewGrid = () => {
             })
             .catch(err => console.error(err));
         
-        console.log(data);
     }, []);
 
     // handle closing of review and display grid again
