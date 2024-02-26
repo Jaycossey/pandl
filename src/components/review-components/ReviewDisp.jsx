@@ -10,7 +10,7 @@ const ReviewDisp = (props) => {
     const [reviewText, setReviewText] = useState(<Loading />);
 
     useEffect(() => {
-        fetch(review, {mode: 'no-cors'})
+        fetch(review)
             .then((res) => res.text())
             .then((data) => {
                 setReviewText(data);
