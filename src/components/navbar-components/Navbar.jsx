@@ -14,8 +14,8 @@ const Navbar = () => {
     return (
         <>
             <nav className='w-full
+                            fixed
                             h-16 
-                            absolute
                             border-b-4 
                             border-blue-900
                             flex 

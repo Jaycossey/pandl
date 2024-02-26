@@ -1,6 +1,8 @@
 const Container = (props) => {
+    
     return (
-        <div className="w-90 
+        <div onClick={props.onClick} 
+            className="w-90 
                         h-content
                         m-8
                         p-8

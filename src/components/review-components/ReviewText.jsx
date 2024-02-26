@@ -1,15 +1,16 @@
 const ReviewText = (props) => {
     return (
-        <p className="relative 
+        <div className="relative 
                         w-full
                         h-content
+                        p-2
                         text-center 
                         col-span-3
                         shadow-md
                         rounded-b-md
                         shadow-black">
                             {props.text}
-        </p>
+        </div>
     );
 }
 
