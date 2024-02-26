@@ -14,7 +14,7 @@ const Home = () => {
                                 m-auto 
                                 h-40
                                 drop-shad" 
-                    src={"./images/pandl-black.PNG"} />
+                    src={"images/pandl-black.PNG"} />
                 
                 <Container content={welcomeText} />
                 <Container content={<PlaylistFrame text={topPicks} />} />

@@ -7,16 +7,17 @@ import Loading from "./Loading";
 const ReviewGrid = () => {
     // set state for review data and rendered elements
     const [renderedState, setRenderedState] = useState(<Loading />);
+    // data from json file
     const [data, setData] = useState([]);
-
-    let allCards;
+    // all jsx card elements
+    const [allCards, setAllCards] = useState([]);
 
     // on component load fetch data
     useEffect(() => {
         fetchData('./reviews.json', {mode: 'no-cors'})
             .then(res => setData(res.reviews))
             .then(() => {
-                allCards = data.map((artist, i) => {
+                setAllCards(data.map((artist, i) => {
                     return ( 
                         <BandCard  
                             key={i}
@@ -26,18 +27,21 @@ const ReviewGrid = () => {
                             onClick={() => handleClick(i)}
                             />
                     );
-                });
+                }));
             })
             .then(() => {
                 // set review grid to show all band cards
+                console.log(allCards)
                 setRenderedState(allCards);
             })
             .catch(err => console.error(err));
-        
+
+        // currently fetches on initial load (technically only on save of this file)
     }, []);
 
     // handle closing of review and display grid again
     const handleClose = () => {
+        console.log('click', allCards);
         setRenderedState(allCards);
     }
 
@@ -48,9 +52,6 @@ const ReviewGrid = () => {
         if (!event.target.id) return;
 
         const review = <ReviewDisp bandData={data[index]} onClick={handleClose} />;
-
-        console.log(event.target.id);
-        console.log(index);
 
         setRenderedState(review);
     }
