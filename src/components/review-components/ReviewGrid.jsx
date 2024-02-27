@@ -6,58 +6,37 @@ import Loading from "./Loading";
 
 const ReviewGrid = (props) => {
     // set state for review data and rendered elements
-    const [renderedState, setRenderedState] = useState(<Loading />);
-    // data from json file
     const [data, setData] = useState([]);
-    
-    let allCards;
+    const [allCards, setAllCards] = useState();
+    const handleClick = props.onClick;
 
-    // on component load fetch data
     useEffect(() => {
-        fetchData('./reviews.json', {mode: 'no-cors'})
-            .then(res => setData(res.reviews))
-            .then(() => {
-                allCards = data.map((artist, i) => {
-                    return ( 
-                        <BandCard  
-                            key={i}
-                            name={artist.band} 
-                            image={artist.image} 
-                            album={artist.title}
-                            onClick={() => handleClick(i)}
-                            />
-                    );
-                })
-            })
-            .then(() => {
-                setRenderedState(allCards);
-            })
+        fetchData('./reviews.json')
+            .then(res => res.json())
+            .then(data => setData(data.reviews))
             .catch(err => console.error(err));
-
+        console.log(data);
+        
     }, []);
 
-    // handle closing of review and display grid again
-    const handleClose = () => {
-        console.log(allCards);
-        setRenderedState(allCards);
+    useEffect(() => {
+        setAllCards(data.map((artist, i) => {
+            <BandCard
+                key={i}
+                name={artist.band} 
+                image={artist.image} 
+                album={artist.title}
+                onClick={() => handleClick(i)}
+                />
+        }))
+        console.log(allCards)
+    }, [data]);
+    
+    if (allCards) {
+        return allCards;
+    } else {
+        return (<Loading />);
     }
-
-    // handleClick will toggle rendered state
-    const handleClick = (index) => {
-        // ensure that click applies to image (useRef would be better)
-        // if no id then ignore click
-        if (!event.target.id) return;
-
-        const review = <ReviewDisp bandData={data[index]} onClick={handleClose} />;
-
-        setRenderedState(review);
-    }
-
-    return (
-        <>
-            {allCards}
-        </>
-    );
 
 }
 
