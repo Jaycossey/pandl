@@ -9,7 +9,7 @@ const BandCard = (props) => {
                         p-2
                         shadow-black
                         hover-anim"
-                        onClick={onClick}>
+                        onClick={console.log(index)}>
 
             <img id={name} 
                 src={image} 

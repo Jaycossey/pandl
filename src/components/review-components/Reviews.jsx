@@ -8,66 +8,13 @@ import fetchData from "../utils/fetchData";
 
 const Reviews = () => {
     const [renderedState, setRenderedState] = useState(<Loading />);
-    const [fetchResults, setFetchResults] = useState();
-    const [allReviews, setAllReviews] = useState([]);
+    const [cards, setCards] = useState();
 
-    useEffect(() => {
-        fetchData('./reviews.json')
-            .then(res => setFetchResults(res.reviews))
-            .catch(err => console.error(err));
-    }, [])
+    const data = fetchData('./reviews.json')
+                    .then(res => res.reviews)
+                    .catch(err => console.error(err));
+    console.log(data);
 
-    useEffect(() => {
-        console.log("Fetch assign successful:", fetchResults);
-        // setAllReviews(fetchResults.map((artist, i) => {
-        //     <BandCard
-        //         key={i}
-        //         name={artist.band}
-        //         image={artist.image}
-        //         album={artist.title}
-        //         onClick={() => {console.log("Click", i)}}
-        //         />
-        // }))
-        console.log(allReviews);
-        // setRenderedState(allReviews);
-    }, [fetchResults])
-    
-    // const handleClose = () => {
-    //     console.log(allReviews);
-    //     setRenderCount(renderCount + 1);
-    //     setRenderedState(allReviews);
-    // }
-    
-    // const handleClick = (index) => {
-    //     console.log("Click", index);
-    //     // console.log(fetchResults[index]);
-    //     // console.log(allReviews);
-    //     // setRenderedState(<ReviewDisp bandData={fetchResults[index]} onClick={handleClose} />)
-    //     // setRenderCount(renderCount + 1);
-    // }
-    
-    // {
-    //     setFetchResults(data.reviews);
-    //     setAllReviews(data.reviews.map((artist, i) =>
-    //     <BandCard
-    //         key={i}
-    //         name={artist.band} 
-    //         image={artist.image} 
-    //         album={artist.title}
-    //         onClick={() => handleClick(i)}
-    //         />
-    // ))
-    // setRenderedState(allReviews)}
-    // useEffect(() => {
-    //     fetch('./reviews.json')
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    //         .catch(err => console.error(err));
-        
-    // }, [])
-
-
-    
     return (
         <div className="pt-16
                         pb-8
