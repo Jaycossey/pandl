@@ -7,13 +7,35 @@ import BandCard from "./BandCard";
 import fetchData from "../utils/fetchData";
 
 const Reviews = () => {
-    const [renderedState, setRenderedState] = useState(<Loading />);
     const [cards, setCards] = useState();
 
-    const data = fetchData('./reviews.json')
-                    .then(res => res.reviews)
-                    .catch(err => console.error(err));
-    console.log(data);
+    const handleClick = (index) => {
+        console.log("click", index);
+    }
+
+    const handleData = (data) => {
+        let dataCopy = data;
+        // console.log(dataCopy);
+        setCards(dataCopy.map((artist, i) => {
+            return (<BandCard 
+                key={i}
+                name={artist.band}
+                image={artist.image}
+                album={artist.title}
+                onClick={() => {handleClick(i)}}
+                />
+        )}))
+        // console.log(cards);    
+    }
+
+    useEffect(() => {
+        fetchData('./reviews.json')
+            .then(res => res.reviews)
+            .then((data) => {
+                handleData(data)
+            })
+            .catch(err => console.error(err));
+    }, [])
 
     return (
         <div className="pt-16
@@ -27,7 +49,7 @@ const Reviews = () => {
 
             {/* Review Select inst */}
             <Container content={"Our Staff have listened to some incredible bands, be that live or their studio work, browse our reviews below."} />
-            <Container content={renderedState} />
+            <Container content={cards ? cards : <Loading />} />
 
         </div>
     );

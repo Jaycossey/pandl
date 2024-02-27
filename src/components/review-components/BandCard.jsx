@@ -1,5 +1,5 @@
 const BandCard = (props) => {
-    const {name, image, album, onClick, index} = props;
+    const {name, image, album, onClick} = props;
 
     return (
         <div className="w-60 
@@ -9,7 +9,7 @@ const BandCard = (props) => {
                         p-2
                         shadow-black
                         hover-anim"
-                        onClick={console.log(index)}>
+                        onClick={onClick}>
 
             <img id={name} 
                 src={image} 

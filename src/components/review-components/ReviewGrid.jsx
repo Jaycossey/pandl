@@ -5,8 +5,19 @@ import ReviewDisp from "./ReviewDisp";
 import Loading from "./Loading";
 
 const ReviewGrid = (props) => {
+    // set state for review data and rendered elements
+    const [data, setData] = useState([]);
     const [allCards, setAllCards] = useState();
-    const data = props.bandData;
+    const handleClick = props.onClick;
+
+    useEffect(() => {
+        fetchData('./reviews.json')
+            .then(res => res.json())
+            .then(data => setData(data.reviews))
+            .catch(err => console.error(err));
+        console.log(data);
+        
+    }, []);
 
     useEffect(() => {
         setAllCards(data.map((artist, i) => {
@@ -19,9 +30,14 @@ const ReviewGrid = (props) => {
                 />
         }))
         console.log(allCards)
-    }, []);
+    }, [data]);
+    
+    if (allCards) {
+        return allCards;
+    } else {
+        return (<Loading />);
+    }
 
-    return allCards;
 }
 
 export default ReviewGrid;
