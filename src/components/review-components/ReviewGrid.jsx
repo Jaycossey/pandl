@@ -69,4 +69,6 @@ export default ReviewGrid;
  * and then store that state somewhere so that the state is preserved
  * between each re-render
  * 
+    hoist the state to parent and pass as props, render via props only and trigger state changes from there
+ * 
  */
