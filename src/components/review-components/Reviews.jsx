@@ -68,8 +68,8 @@ const Reviews = () => {
         return (
             <div className="pt-16
                             pb-8
-                            h-max-content
-                            sm:h-screen
+                            h-screen
+                            sm:h-max-content
                             bg-fixed
                             bg-gradient-to-r 
                             from-orange-500 
