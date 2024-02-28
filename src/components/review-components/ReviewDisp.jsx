@@ -40,8 +40,8 @@ const ReviewDisp = (props) => {
                 <p>{title}</p>
                 <p>{reviewType}</p>
 
-                <img className="w-60
-                                h-60
+                <img className="w-40
+                                h-40
                                 shadow-2xl 
                                 rounded-md
                                 shadow-black

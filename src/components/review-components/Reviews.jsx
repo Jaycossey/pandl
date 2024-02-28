@@ -8,24 +8,20 @@ import fetchData from "../utils/fetchData";
 
 const Reviews = () => {
     const [cards, setCards] = useState();
-    const [singleReview, setSingleReview] = useState(<Loading />)
-    const [data, setData] = useState(0);
+    const [data, setData] = useState([]);
+    const [index, setIndex] = useState(0);
     const [individualReviewToggle, setIndividualReviewToggle] = useState(false);
 
-    // needs to handle the toggle of rendered data and 
-    // pass data to individual review ONLY
+    // handles data selection and toggle state
     const handleClick = (index) => {
-        console.log("click", index);
         setIndividualReviewToggle(true);
-        // THIS IS THE HIGH LEVEL OF WHAT I NEED TO DO, BREAK IT DOWN!!!!!!!
-        // setSingleReview(<ReviewDisp bandData={data[index]} onClick={setIndividualReviewToggle(false)} />)
+        setIndex(index);
     }
 
-    // dont fuck with this
+    // assigns data and sets all cards
     const handleData = (data) => {
         let dataCopy = data;
         setData(dataCopy);
-        // console.log(dataCopy);
         setCards(dataCopy.map((artist, i) => {
             return (<BandCard 
                 key={i}
@@ -38,7 +34,7 @@ const Reviews = () => {
         // console.log(cards);    
     }
 
-    // dont fuck with this
+    // fetch data on initial rendering of component
     useEffect(() => {
         fetchData('./reviews.json')
             .then(res => res.reviews)
@@ -48,11 +44,14 @@ const Reviews = () => {
             .catch(err => console.error(err));
     }, [])
 
+    // render components based on user input
     if (!individualReviewToggle) {
+        // All review cards
         return (
             <div className="pt-16
                             pb-8
-                            h-screen
+                            h-max-content
+                            sm:h-screen
                             bg-fixed
                             bg-gradient-to-r 
                             from-orange-500 
@@ -66,16 +65,17 @@ const Reviews = () => {
             </div>
         );
     } else {
+        // individual reviews
         return (
             <div className="pt-16
                             pb-8
-                            h-screen
+                            h-max-content
                             bg-fixed
                             bg-gradient-to-r 
                             from-orange-500 
                             via-orange-300 
                             to-blue-400">
-                <Container content={singleReview} />
+                <Container content={<ReviewDisp bandData={data[index]} onClick={() => setIndividualReviewToggle(false)} />} />
             </div>
 
         );
