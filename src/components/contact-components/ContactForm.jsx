@@ -3,8 +3,9 @@ import TextInput from './TextInput';
 
 const ContactForm = () => {
 
+    // using formSubmit for this for now, enables easy posting for emails
     return (
-        <form action="URL_HERE" method="POST" 
+        <form action="https://formsubmit.co/pandltunes@gmail.com" method="POST" 
                 className='flex
                             flex-col
                             p-8
@@ -16,7 +17,7 @@ const ContactForm = () => {
             <p className='-mb-2'>Follow the prompts below</p>
             <TextInput name="bandName" placeholder="Band Name" type="text"></TextInput>
             <TextInput name="email" placeholder="Email" type="text"></TextInput>
-            <TextInput name="bandLoc" placeholder="Location" type="text"></TextInput>
+            <TextInput name="bandLocation" placeholder="Location" type="text"></TextInput>
             
             <p>Please Select Your Genre</p>
             <FormSelect />
@@ -36,7 +37,14 @@ const ContactForm = () => {
                 placeholder="Other Information" />
 
             <button
-                className="w-full h-16 bg-slate-500 bg-opacity-60 border-2 rounded-lg cursor-pointer" 
+                className="w-full 
+                        h-16 
+                        bg-blue-600 
+                        bg-opacity-60 
+                        border-2 
+                        border-blue-900
+                        rounded-lg 
+                        cursor-pointer" 
                 type="submit">
                     Submit
             </button>

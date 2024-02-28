@@ -5,19 +5,19 @@ import WideNav from './WideNav';
 import DropNav from './DropNav';
 
 const Navbar = () => {
+    // set dropdown render toggle
     const [navRender, setNavRender] = useState(false);
+    
+    // if small screens, toggle which navbar to display
     const handleBurger = () => {
         const width = window.screen.availWidth;
 
         if (width <= 600 && navRender == false) {
-            console.log("Active dd", navRender)
             setNavRender(true);
         }
         
         if (width <= 600 && navRender == true) {
-            console.log("remove dd", navRender);
             setNavRender(false);
-            // UseRef to target the navbar children and remove the "display: none" properties
         }
     }
 
