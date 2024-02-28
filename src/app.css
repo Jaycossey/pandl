@@ -15,6 +15,12 @@
     height: 60px;
 }
 
+.fadeIn {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
 /* HOME STYLES ---------------------------------- */
 .bg-pandl {
     width: 100%;
@@ -48,6 +54,15 @@
     }
 
 
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* REVIEW STYLES -------------------------------- */
