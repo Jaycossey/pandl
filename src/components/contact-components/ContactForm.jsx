@@ -16,7 +16,7 @@ const ContactForm = () => {
 
             <p className='-mb-2'>Follow the prompts below</p>
             <TextInput name="bandName" placeholder="Band Name" type="text"></TextInput>
-            <TextInput name="email" placeholder="Email" type="text"></TextInput>
+            <TextInput name="email" placeholder="Email" type="email"></TextInput>
             <TextInput name="bandLocation" placeholder="Location" type="text"></TextInput>
             
             <p>Please Select Your Genre</p>
