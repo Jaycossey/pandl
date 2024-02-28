@@ -1,3 +1,4 @@
+// select dropdown menu for contact form
 const FormSelect = () => {
     return (
         <select name="genre" 

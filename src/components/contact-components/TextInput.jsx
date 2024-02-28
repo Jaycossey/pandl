@@ -1,3 +1,4 @@
+// text input for contact form
 const TextInput = (props) => {
 
     return (
