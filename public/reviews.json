@@ -23,6 +23,38 @@
             "title": "Lune",
             "image": "images/lune.png",
             "writer": "Josi"
+        },
+        {
+            "band": "Like Ghosts",
+            "reviewType": "Single",
+            "review": "text-files/likeGhosts.txt",
+            "title": "Iris",
+            "image": "images/likeGhosts.png",
+            "writer": "Phil"
+        },
+        {
+            "band": "From Eden To Exile",
+            "reviewType": "Single",
+            "review": "text-files/fete.txt",
+            "title": "Reason to Hate",
+            "image": "images/fete.png",
+            "writer": "Phil"
+        },
+        {
+            "band": "Stell/\\is",
+            "reviewType": "Single",
+            "review": "text-files/stellvris.txt",
+            "title": "Upside Down",
+            "image": "images/stellvris.png",
+            "writer": "Phil"
+        },
+        {
+            "band": "Dream State",
+            "reviewType": "EP",
+            "review": "text-files/dreamState.txt",
+            "title": "Untethered",
+            "image": "images/dreamState.png",
+            "writer": "Phil"
         }
     ]
 }
