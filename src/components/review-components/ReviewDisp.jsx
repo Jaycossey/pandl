@@ -10,7 +10,7 @@ const ReviewDisp = (props) => {
     const [reviewText, setReviewText] = useState(<Loading />);
 
     useEffect(() => {
-        fetch(review, {mode: 'no-cors'})
+        fetch(review)
             .then((res) => res.text())
             .then((data) => {
                 setReviewText(data);
@@ -26,9 +26,6 @@ const ReviewDisp = (props) => {
 
 
     return (
-        // this whole section needs reworking, I want to think how to store the data, would be best to 
-        // work with JSON to target as best practice, this will allow the addition of new reviews via the 
-        // server
         <>
             <div className="p-2 
                     w-full 
@@ -43,8 +40,8 @@ const ReviewDisp = (props) => {
                 <p>{title}</p>
                 <p>{reviewType}</p>
 
-                <img className="w-60
-                                h-60
+                <img className="w-40
+                                h-40
                                 shadow-2xl 
                                 rounded-md
                                 shadow-black

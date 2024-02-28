@@ -12,7 +12,7 @@ const fetchData = async (query) => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 res(data);
             })
             .catch(err => {

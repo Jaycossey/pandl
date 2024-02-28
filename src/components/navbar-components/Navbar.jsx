@@ -1,13 +1,22 @@
 import { NavLink } from 'react-router-dom';
 import BurgerBar from './BurgerBar';
+import DropdownNav from './DropdownNav';
+import { useState } from 'react';
 
 const Navbar = () => {
+    const [navRender, setNavRender] = useState(0);
     const handleBurger = () => {
         const width = window.screen.availWidth;
-        console.log(width);
 
-        if (width <= 600) {
-            console.log("activate dropdown");
+        if (width <= 600 && navRender == 0) {
+            console.log("Active dd", navRender)
+            setNavRender(1)
+        }
+        
+        if (width <= 600 && navRender != 0) {
+            console.log("remove dd", navRender);
+            setNavRender(0);
+            // UseRef to target the navbar children and remove the "display: none" properties
         }
     }
 

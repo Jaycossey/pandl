@@ -1,5 +1,5 @@
 const BandCard = (props) => {
-    const {name, image, album, onClick, index} = props;
+    const {name, image, album, onClick} = props;
 
     return (
         <div className="w-60 
