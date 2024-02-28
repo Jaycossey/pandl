@@ -2,7 +2,7 @@
 const TextInput = (props) => {
 
     return (
-        <input name={props.name}
+        <input name={props.inputName}
                 value={value}
                 type={props.type}
                 placeholder={props.placeholder}

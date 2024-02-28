@@ -15,15 +15,15 @@ const ContactForm = () => {
             <p className='text-lg'>Contact Us for a Review of your Music!</p>
 
             <p className='-mb-2'>Follow the prompts below</p>
-            <TextInput name="bandName" placeholder="Band Name" type="text"></TextInput>
-            <TextInput name="email" placeholder="Email" type="email"></TextInput>
-            <TextInput name="bandLocation" placeholder="Location" type="text"></TextInput>
+            <TextInput inputName="bandName" placeholder="Band Name" type="text"></TextInput>
+            <TextInput inputName="email" placeholder="Email" type="email"></TextInput>
+            <TextInput inputName="bandLocation" placeholder="Location" type="text"></TextInput>
             
             <p>Please Select Your Genre</p>
             <FormSelect />
 
-            <TextInput name="url" type="url" placeholder="Website URL" />
-            <TextInput name="musicUrl" type="url" placeholder="Music URL" />
+            <TextInput inputName="url" type="url" placeholder="Website URL" />
+            <TextInput inputName="musicUrl" type="url" placeholder="Music URL" />
 
             <textarea 
                 name="otherInfo" 
