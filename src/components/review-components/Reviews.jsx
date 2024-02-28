@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Container from "../container-components/Container";
 import Loading from "./Loading";
 import ReviewDisp from "./ReviewDisp";
-import ReviewGrid from "./ReviewGrid";
 import BandCard from "./BandCard";
 import fetchData from "../utils/fetchData";
 
