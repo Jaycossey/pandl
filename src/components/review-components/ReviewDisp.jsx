@@ -29,6 +29,7 @@ const ReviewDisp = (props) => {
         <>
             <div className="p-2 
                     w-full 
+                    h-max-content
                     flex 
                     flex-col 
                     items-center 
@@ -60,7 +61,7 @@ const ReviewDisp = (props) => {
             <FontAwesomeIcon icon={faCircleXmark}
                             onClick={onClick}
                             className="relative
-                                        mt-16
+                                        mt-8
                                         w-16
                                         p-1
                                         bg-gradient-to-t
