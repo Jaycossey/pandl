@@ -2,7 +2,9 @@
 const TextInput = (props) => {
 
     return (
-        <input type={props.type}
+        <input name={props.name}
+                value={value}
+                type={props.type}
                 placeholder={props.placeholder}
                 className="rounded-lg
                             border-2
@@ -10,6 +12,7 @@ const TextInput = (props) => {
                             text-center
                             w-full
                             h-8">
+                                {value}
         </input>
     );
 }
