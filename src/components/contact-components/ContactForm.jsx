@@ -5,7 +5,7 @@ const ContactForm = () => {
 
     // using formSubmit for this for now, enables easy posting for emails
     return (
-        <form action="https://formsubmit.co/pandltunes@gmail.com" method="POST" 
+        <form action="https://formsubmit.co/a8b9f55a7f33ba6f65924049b4e050c1" method="POST" 
                 className='flex
                             flex-col
                             p-8
