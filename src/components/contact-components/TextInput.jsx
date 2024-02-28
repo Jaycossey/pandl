@@ -2,8 +2,7 @@
 const TextInput = (props) => {
 
     return (
-        <input name={props.name}
-                value={value}
+        <input name={props.inputName}
                 type={props.type}
                 placeholder={props.placeholder}
                 className="rounded-lg
@@ -12,7 +11,6 @@ const TextInput = (props) => {
                             text-center
                             w-full
                             h-8">
-                                {value}
         </input>
     );
 }
