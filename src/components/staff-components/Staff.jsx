@@ -4,7 +4,8 @@ import StaffGrid from "./StaffGrid";
 const Staff = (props) => {
     return (
         <div className="pt-16
-                        h-screen
+                        h-max-content
+                        sm:h-screen
                         bg-fixed
                         pb-8
                         bg-gradient-to-t 
