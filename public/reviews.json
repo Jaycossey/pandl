@@ -1,6 +1,14 @@
 {
     "reviews": [
         {
+            "band": "Defects",
+            "reviewType": "Album",
+            "review": "text-files/defects.txt",
+            "title": "Modern Error",
+            "image": "images/defects.png",
+            "writer": "Phil"
+        },
+        {
             "band": "Diamond Construct",
             "reviewType": "Single",
             "review": "text-files/diamondConstruct.txt",
