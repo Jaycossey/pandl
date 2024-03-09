@@ -9,6 +9,14 @@
             "writer": "Phil"
         },
         {
+            "band": "Vanitas",
+            "reviewType": "Album",
+            "review": "text-files/vanitas.txt",
+            "title": "Grey Morality",
+            "image": "images/vanitas.png",
+            "writer": "Phil"
+        },
+        {
             "band": "Diamond Construct",
             "reviewType": "Single",
             "review": "text-files/diamondConstruct.txt",
