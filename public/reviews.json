@@ -9,6 +9,14 @@
             "writer": "Phil"
         },
         {
+            "band": "Belmont",
+            "reviewType": "Single",
+            "review": "text-files/belmont.txt",
+            "title": "All Bite",
+            "image": "images/belmont.png",
+            "writer": "Kris"
+        },
+        {
             "band": "Vanitas",
             "reviewType": "Album",
             "review": "text-files/vanitas.txt",
