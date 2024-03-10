@@ -29,7 +29,7 @@ const ContactForm = () => {
                 name="otherInfo" 
                 type="text" 
                 className="w-full 
-                            h-40 
+                            h-20 
                             p-2 
                             text-center 
                             rounded-lg 
