@@ -1,5 +1,7 @@
 // text input for contact form
 const TextInput = (props) => {
+    const register = props.register;
+    const required = props.required;
 
     return (
         <input name={props.inputName}
@@ -10,7 +12,8 @@ const TextInput = (props) => {
                             border-blue-900
                             text-center
                             w-full
-                            h-8">
+                            h-8"
+                {...register(props.inputName, {required})}>
         </input>
     );
 }
