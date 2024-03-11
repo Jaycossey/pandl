@@ -1,5 +1,6 @@
 // select dropdown menu for contact form
-const FormSelect = () => {
+const FormSelect = (props) => {
+    const {register, required} = props;
     return (
         <select name="genre" 
                 type="select"
@@ -8,7 +9,8 @@ const FormSelect = () => {
                             border-2
                             h-8
                             rounded-md
-                            -mt-4" >
+                            -mt-4"
+                {...register("genre", {required})}>
 
             <option value="">-- Please Select --</option>
             <option value="metal">Metal</option>
